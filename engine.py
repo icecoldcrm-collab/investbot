@@ -1,5 +1,5 @@
 # 1. Install required dependencies cleanly
-!pip install -q yfinance pandas requests numpy
+
 
 import os
 import json
