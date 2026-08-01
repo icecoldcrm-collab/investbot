@@ -1,6 +1,3 @@
-# 1. Install required dependencies cleanly
-
-
 import os
 import json
 import pandas as pd
@@ -57,7 +54,7 @@ class StrictPositionSizedEngine:
             json.dump(state, f, indent=4)
 
     def fetch_recent_data(self) -> Dict[str, pd.DataFrame]:
-        """Fetches actual recent market and weather data for the utility basket."""
+        """Fetches actual recent market and weather data. Blocks/skips if API fails."""
         end_date = datetime.now().strftime("%Y-%m-%d")
         start_date = (datetime.now() - timedelta(days=14)).strftime("%Y-%m-%d")
         
@@ -81,22 +78,20 @@ class StrictPositionSizedEngine:
             except Exception:
                 w_json = {}
 
+            # BLOCK TRADING FOR THIS TICKER IF WEATHER DATA FAILS
             if "hourly" not in w_json:
-                weather_df = pd.DataFrame({
-                    "temperature_2m": np.random.uniform(28, 36, len(stock_df)),
-                    "precipitation": np.random.choice([0.0, 5.0, 12.0], len(stock_df), p=[0.7, 0.2, 0.1]),
-                    "wind_speed": np.random.uniform(8, 22, len(stock_df))
-                }, index=stock_df.index[:len(stock_df)])
-            else:
-                hourly = w_json["hourly"]
-                w_df = pd.DataFrame({
-                    "time": pd.to_datetime(hourly["time"]),
-                    "temperature_2m": hourly["temperature_2m"],
-                    "precipitation": hourly["precipitation"],
-                    "wind_speed": hourly["wind_speed_10m"]
-                })
-                w_df.set_index("time", inplace=True)
-                weather_df = w_df.resample('D').mean().dropna()
+                print(f"[WARNING] Weather API failed for {ticker}. Skipping ticker for this cycle to prevent blind trading.")
+                continue
+
+            hourly = w_json["hourly"]
+            w_df = pd.DataFrame({
+                "time": pd.to_datetime(hourly["time"]),
+                "temperature_2m": hourly["temperature_2m"],
+                "precipitation": hourly["precipitation"],
+                "wind_speed": hourly["wind_speed_10m"]
+            })
+            w_df.set_index("time", inplace=True)
+            weather_df = w_df.resample('D').mean().dropna()
 
             merged = pd.concat([stock_df[['Close']], weather_df], axis=1).dropna()
             if not merged.empty:
