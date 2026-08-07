@@ -1,5 +1,5 @@
 {
-    "last_run_date": "2026-07-31",
+    "last_run_date": "2026-08-07",
     "models": {
         "Model_A_HeatwaveFocus": {
             "total_trades": 4,
@@ -40,26 +40,31 @@
                     "date": "2026-07-31",
                     "portfolio_value": 6000.0,
                     "return_pct": 0.0
+                },
+                {
+                    "date": "2026-08-07",
+                    "portfolio_value": 5926.59,
+                    "return_pct": -1.22
                 }
             ]
         },
         "Model_B_StormChase": {
-            "total_trades": 5,
+            "total_trades": 10,
             "assets": {
                 "NEE": {
-                    "cash": 0.0,
-                    "shares": 11.372682776405465,
-                    "buy_price": 87.93000030517578
+                    "cash": 962.1289455305656,
+                    "shares": 0.0,
+                    "buy_price": 0.0
                 },
                 "CEG": {
-                    "cash": 0.0,
-                    "shares": 3.7942024937896104,
-                    "buy_price": 263.55999755859375
+                    "cash": 990.6662942864415,
+                    "shares": 0.0,
+                    "buy_price": 0.0
                 },
                 "AES": {
-                    "cash": 0.0,
-                    "shares": 67.34006561022247,
-                    "buy_price": 14.850000381469727
+                    "cash": 989.8989516261721,
+                    "shares": 0.0,
+                    "buy_price": 0.0
                 },
                 "DUK": {
                     "cash": 1000.0,
@@ -67,14 +72,14 @@
                     "buy_price": 0.0
                 },
                 "SO": {
-                    "cash": 0.0,
-                    "shares": 10.599958011640933,
-                    "buy_price": 94.33999633789062
+                    "cash": 984.736115455695,
+                    "shares": 0.0,
+                    "buy_price": 0.0
                 },
                 "XEL": {
-                    "cash": 0.0,
-                    "shares": 12.782819341543197,
-                    "buy_price": 78.2300033569336
+                    "cash": 983.8936203226074,
+                    "shares": 0.0,
+                    "buy_price": 0.0
                 }
             },
             "history": [
@@ -82,6 +87,11 @@
                     "date": "2026-07-31",
                     "portfolio_value": 6000.0,
                     "return_pct": 0.0
+                },
+                {
+                    "date": "2026-08-07",
+                    "portfolio_value": 5911.32,
+                    "return_pct": -1.48
                 }
             ]
         },
@@ -124,6 +134,11 @@
                     "date": "2026-07-31",
                     "portfolio_value": 6000.0,
                     "return_pct": 0.0
+                },
+                {
+                    "date": "2026-08-07",
+                    "portfolio_value": 5892.55,
+                    "return_pct": -1.79
                 }
             ]
         },
@@ -166,11 +181,16 @@
                     "date": "2026-07-31",
                     "portfolio_value": 6000.0,
                     "return_pct": 0.0
+                },
+                {
+                    "date": "2026-08-07",
+                    "portfolio_value": 6000.0,
+                    "return_pct": 0.0
                 }
             ]
         },
         "Model_E_Balanced": {
-            "total_trades": 3,
+            "total_trades": 6,
             "assets": {
                 "NEE": {
                     "cash": 1000.0,
@@ -178,14 +198,14 @@
                     "buy_price": 0.0
                 },
                 "CEG": {
-                    "cash": 0.0,
-                    "shares": 3.7942024937896104,
-                    "buy_price": 263.55999755859375
+                    "cash": 990.6662942864415,
+                    "shares": 0.0,
+                    "buy_price": 0.0
                 },
                 "AES": {
-                    "cash": 0.0,
-                    "shares": 67.34006561022247,
-                    "buy_price": 14.850000381469727
+                    "cash": 989.8989516261721,
+                    "shares": 0.0,
+                    "buy_price": 0.0
                 },
                 "DUK": {
                     "cash": 1000.0,
@@ -198,9 +218,9 @@
                     "buy_price": 0.0
                 },
                 "XEL": {
-                    "cash": 0.0,
-                    "shares": 12.782819341543197,
-                    "buy_price": 78.2300033569336
+                    "cash": 983.8936203226074,
+                    "shares": 0.0,
+                    "buy_price": 0.0
                 }
             },
             "history": [
@@ -208,6 +228,11 @@
                     "date": "2026-07-31",
                     "portfolio_value": 6000.0,
                     "return_pct": 0.0
+                },
+                {
+                    "date": "2026-08-07",
+                    "portfolio_value": 5964.46,
+                    "return_pct": -0.59
                 }
             ]
         }
