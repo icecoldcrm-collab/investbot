@@ -54,7 +54,7 @@ class StrictPositionSizedEngine:
             json.dump(state, f, indent=4)
 
     def fetch_recent_data(self) -> Dict[str, pd.DataFrame]:
-        """Fetches actual recent market and weather data. Blocks/skips if API fails."""
+        """Fetches actual recent market and weather data using forecast/archive blend."""
         end_date = datetime.now().strftime("%Y-%m-%d")
         start_date = (datetime.now() - timedelta(days=14)).strftime("%Y-%m-%d")
         
@@ -66,7 +66,8 @@ class StrictPositionSizedEngine:
             if isinstance(stock_df.columns, pd.MultiIndex):
                 stock_df.columns = stock_df.columns.get_level_values(0)
 
-            weather_url = "https://api.open-meteo.com/v1/archive"
+            # Use the forecast endpoint which supports current/recent dates without archive lag
+            weather_url = "https://api.open-meteo.com/v1/forecast"
             weather_params = {
                 "latitude": self.lat, "longitude": self.lon,
                 "start_date": start_date, "end_date": end_date,
