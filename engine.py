@@ -26,11 +26,16 @@ class SelfEvolvingTradingEngine:
         }
 
     def load_state(self) -> Dict[str, Any]:
-        """Loads persistent state, including evolving strategy parameters."""
+        """Loads persistent state, ensuring backward compatibility for parameters."""
         if os.path.exists(self.state_filename):
             try:
                 with open(self.state_filename, "r") as f:
-                    return json.load(f)
+                    state = json.load(f)
+                    # Automatically inject missing parameters for older state files
+                    for m_name, default_params in self.default_models.items():
+                        if m_name in state["models"] and "parameters" not in state["models"][m_name]:
+                            state["models"][m_name]["parameters"] = default_params
+                    return state
             except Exception:
                 pass
         
