@@ -1,5 +1,5 @@
 {
-    "last_run_date": "2026-08-17",
+    "last_run_date": "2026-08-18",
     "models": {
         "Model_A_HeatwaveFocus": {
             "total_trades": 8,
@@ -85,13 +85,18 @@
                     "date": "2026-08-17",
                     "portfolio_value": 5926.59,
                     "return_pct": -1.22
+                },
+                {
+                    "date": "2026-08-18",
+                    "portfolio_value": 5926.59,
+                    "return_pct": -1.22
                 }
             ],
             "parameters": {
-                "rain_buy": 12.19,
-                "wind_buy": 19.83,
-                "temp_buy": 35.18,
-                "rain_sell": 2.89
+                "rain_buy": 12.23,
+                "wind_buy": 23.62,
+                "temp_buy": 32.31,
+                "rain_sell": 2.91
             }
         },
         "Model_B_StormChase": {
@@ -178,13 +183,18 @@
                     "date": "2026-08-17",
                     "portfolio_value": 5911.32,
                     "return_pct": -1.48
+                },
+                {
+                    "date": "2026-08-18",
+                    "portfolio_value": 5911.32,
+                    "return_pct": -1.48
                 }
             ],
             "parameters": {
-                "rain_buy": 12.74,
-                "wind_buy": 25.03,
-                "temp_buy": 33.09,
-                "rain_sell": 3.14
+                "rain_buy": 10.58,
+                "wind_buy": 22.48,
+                "temp_buy": 39.8,
+                "rain_sell": 3.42
             }
         },
         "Model_C_Aggressive": {
@@ -271,13 +281,18 @@
                     "date": "2026-08-17",
                     "portfolio_value": 5892.55,
                     "return_pct": -1.79
+                },
+                {
+                    "date": "2026-08-18",
+                    "portfolio_value": 5892.55,
+                    "return_pct": -1.79
                 }
             ],
             "parameters": {
-                "rain_buy": 13.27,
-                "wind_buy": 24.12,
-                "temp_buy": 34.06,
-                "rain_sell": 2.69
+                "rain_buy": 13.51,
+                "wind_buy": 20.62,
+                "temp_buy": 33.63,
+                "rain_sell": 3.07
             }
         },
         "Model_D_Conservative": {
@@ -362,6 +377,11 @@
                 },
                 {
                     "date": "2026-08-17",
+                    "portfolio_value": 6000.0,
+                    "return_pct": 0.0
+                },
+                {
+                    "date": "2026-08-18",
                     "portfolio_value": 6000.0,
                     "return_pct": 0.0
                 }
@@ -457,13 +477,18 @@
                     "date": "2026-08-17",
                     "portfolio_value": 5964.46,
                     "return_pct": -0.59
+                },
+                {
+                    "date": "2026-08-18",
+                    "portfolio_value": 5964.46,
+                    "return_pct": -0.59
                 }
             ],
             "parameters": {
-                "rain_buy": 13.42,
-                "wind_buy": 18.86,
-                "temp_buy": 31.97,
-                "rain_sell": 3.04
+                "rain_buy": 13.07,
+                "wind_buy": 21.25,
+                "temp_buy": 38.83,
+                "rain_sell": 3.17
             }
         }
     }
